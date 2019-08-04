@@ -27,7 +27,7 @@ public class SpringUtil implements BeanFactoryPostProcessor {
     public static Object getBeanByName(String name) {
         return beanFactory.getBean(name);
     }
-    public static <E> E getBeanByClzz(Class<E> eClass) {
+    public static <E> E getBeanByClazz(Class<E> eClass) {
         return beanFactory.getBean(eClass);
     }
 }
