@@ -1,5 +1,7 @@
 package com.miles.quartz.handler;
 
+import com.miles.quartz.service.IScheduleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +15,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class QuartzScheduleTomcat implements CommandLineRunner {
 
+    @Autowired
+    private IScheduleService service;
 
     @Override
-    public void run(String... args) throws Exception {
-
+    public void run(String... args) {
+        System.out.println("开始调度");
+        service.scheduleTask();
+        System.out.println("结束调度");
     }
 }
