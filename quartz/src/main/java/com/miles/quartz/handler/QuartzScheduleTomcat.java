@@ -24,4 +24,5 @@ public class QuartzScheduleTomcat implements CommandLineRunner {
         service.scheduleTask();
         System.out.println("结束调度");
     }
+//    CommandLineRunner commandLineRunner = c -> service.scheduleTask();
 }
